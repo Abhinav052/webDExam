@@ -17,17 +17,15 @@ const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const MongoStore = require('connect-mongo');
 
-// Routes
 const productRoutes = require('./routes/product');
 const reviewRoutes = require('./routes/review');
 const authRoutes = require('./routes/auth');
 const cartRoutes = require('./routes/cart');
 const orderRoutes = require('./routes/order');
-// APIs
 const productApis = require('./routes/api/productapi');
 
 
-const dbUrl = process.env.dbUrl || 'mongodb://localhost:27017/shopping-app'
+const dbUrl = 'mongodb://localhost:27017/abhshoppingapp'
 
 mongoose.connect(dbUrl)
     .then(() => console.log('DB Connected'))
